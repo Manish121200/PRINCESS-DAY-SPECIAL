@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#21152d">
+  <title>For My Queen & Princess ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+
+  <main>
+    <!-- WELCOME / ENVELOPE -->
+    <section class="screen hero active" id="welcome">
+      <div class="eyebrow">A little royal celebration</div>
+      <div class="crown-big">♕</div>
+      <p class="small-label">A SURPRISE MADE WITH LOVE</p>
+      <h1>For My <em>Queen</em><br>& My <em>Princess</em></h1>
+      <p class="lead">Two beautiful souls. Two very special places in my heart.</p>
+      <div class="envelope-wrap">
+        <button class="envelope" id="openInvite" aria-label="Open your royal invitation">
+          <span class="envelope-flap"></span>
+          <span class="envelope-heart">♡</span>
+          <span class="envelope-note">A royal invitation</span>
+        </button>
+      </div>
+      <p class="hint">Tap the envelope to open your surprise ✨</p>
+    </section>
+
+    <!-- MAIN EXPERIENCE -->
+    <section class="screen" id="celebration">
+      <nav class="top-nav">
+        <span class="nav-brand">♡ A ROYAL DAY ♡</span>
+        <button class="sound-toggle" id="sparkleButton" type="button">✨ Make it sparkle</button>
+      </nav>
+
+      <header class="page-heading">
+        <p class="eyebrow">18 November · International Princess Day</p>
+        <h2>Happy <em>Princess Day!</em></h2>
+        <p class="lead">Today, the spotlight belongs to two of my favourite people. There are letters, memories, little challenges and lots of love waiting for you.</p>
+      </header>
+
+      <div class="royal-cards">
+        <article class="royal-card queen-card">
+          <div class="portrait-icon">👑</div>
+          <p class="card-kicker">MY FOREVER</p>
+          <h3>My Queen</h3>
+          <p>The woman who makes my world feel like home.</p>
+          <button class="gold-button" data-letter="queenLetter">Open your letter ♡</button>
+        </article>
+        <article class="royal-card princess-card">
+          <div class="portrait-icon">👸🏻</div>
+          <p class="card-kicker">OUR LITTLE STAR</p>
+          <h3>My Princess</h3>
+          <p>The bright little spark who makes the family smile.</p>
+          <button class="gold-button" data-letter="princessLetter">Open your letter ♡</button>
+        </article>
+      </div>
+
+      <div class="letter-panel" id="queenLetter" hidden>
+        <button class="close-letter" aria-label="Close letter">×</button>
+        <p class="eyebrow">A letter from your person</p>
+        <h3>To my beautiful Queen ❤️</h3>
+        <p>[Write your own paragraph here. Tell her what you love about her, what makes her special, and how grateful you are to share life with her.]</p>
+        <p>You are my favourite person, my peace, and my forever. I love you endlessly.</p>
+      </div>
+      <div class="letter-panel" id="princessLetter" hidden>
+        <button class="close-letter" aria-label="Close letter">×</button>
+        <p class="eyebrow">A little note just for you</p>
+        <h3>To my sweetest Princess 💗</h3>
+        <p>[Write a warm, playful paragraph for her little sister. Add a favourite memory, an inside joke, or something you admire about her.]</p>
+        <p>Keep smiling, keep shining, and never stop chasing your dreams. You deserve all the lovely things in life.</p>
+      </div>
+
+      <section class="quote-section">
+        <span class="quote-mark">“</span>
+        <blockquote>A queen is not defined by a crown, nor a princess by a fairytale. Their magic is in the kindness they share, the strength they carry, and the light they bring into the lives around them.</blockquote>
+        <p class="eyebrow">A little reminder for my two stars</p>
+      </section>
+
+      <!-- PHOTO GALLERY -->
+      <section class="gallery-section" id="memories">
+        <p class="eyebrow">Little moments, endless memories</p>
+        <h2>Our Royal <em>Memories</em></h2>
+        <p class="section-intro">A few frames, a thousand feelings. ♡</p>
+        <div class="gallery-main">
+          <button class="gallery-arrow" id="prevPhoto" aria-label="Previous photo">‹</button>
+          <button class="photo-frame" id="photoOpen" aria-label="Enlarge current photo">
+            <img id="galleryImage" src="photos/photo1.jpg" alt="A favourite memory">
+            <span class="photo-fallback" id="photoFallback">Add your photos in the <b>photos</b> folder<br><small>photo1.jpg to photo7.jpg</small></span>
+            <span class="photo-caption" id="photoCaption">A favourite little moment ♡</span>
+          </button>
+          <button class="gallery-arrow" id="nextPhoto" aria-label="Next photo">›</button>
+        </div>
+        <div class="gallery-dots" id="galleryDots" aria-label="Choose a photo"></div>
+        <p class="gallery-help">Tap a photo to view it larger · Use arrows to explore</p>
+      </section>
+
+      <!-- FUN MINI GAME -->
+      <section class="game-section">
+        <p class="eyebrow">A tiny royal game</p>
+        <h2>Who gets the <em>royal treatment?</em></h2>
+        <p class="section-intro">A very serious royal question… with a very obvious answer.</p>
+        <div class="game-card">
+          <div class="game-crown">👑</div>
+          <h3>Who deserves unlimited love, hugs and treats today?</h3>
+          <div class="game-actions">
+            <button class="game-choice" id="queenChoice">My Queen 💕</button>
+            <button class="game-choice" id="princessChoice">My Princess 🌸</button>
+            <button class="game-choice" id="bothChoice">BOTH OF YOU! 👑</button>
+          </div>
+          <p class="game-result" id="gameResult" aria-live="polite">Choose your answer, Your Highness.</p>
+        </div>
+      </section>
+
+      <!-- FUN ACTIVITIES -->
+      <section class="activity-section">
+        <p class="eyebrow">Let's see how well you know us</p>
+        <h2>A Little <em>Fun Challenge</em></h2>
+        <p class="section-intro">Three tiny questions, lots of smiles. Take turns answering!</p>
+
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-progress" id="quizProgress">QUESTION 1 OF 3</div>
+          <h3 id="quizQuestion">Who has the cutest smile?</h3>
+          <div class="quiz-options" id="quizOptions">
+            <button class="quiz-option" data-answer="queen">My Queen 👑</button>
+            <button class="quiz-option" data-answer="princess">My Princess 👸🏻</button>
+            <button class="quiz-option" data-answer="both">Both of you 💗</button>
+          </div>
+          <p class="quiz-feedback" id="quizFeedback" aria-live="polite">Choose carefully… this is a very important royal matter!</p>
+          <button class="gold-button quiz-next" id="quizNext" hidden>Next question →</button>
+        </div>
+
+        <div class="activity-grid">
+          <div class="activity-card">
+            <div class="activity-emoji">💌</div>
+            <h3>Complete the memory</h3>
+            <p>One of our cutest little conversations…</p>
+            <button class="outline-button" id="memoryReveal">Reveal the memory</button>
+            <p class="memory-answer" id="memoryAnswer" hidden>“I love you” … “I love you, Mr Cool!” 🥹❤️<br><small>Dono ka sync bohtt cute hai!</small></p>
+          </div>
+          <div class="activity-card">
+            <div class="activity-emoji">💖</div>
+            <h3>Collect the love</h3>
+            <p>Tap the hearts and collect 5. Ready?</p>
+            <div class="heart-game">
+              <span id="heartCount">0 / 5 hearts</span>
+              <button id="collectHeart" aria-label="Collect a heart">♡</button>
+            </div>
+            <p class="memory-answer" id="heartWin" hidden>Yay! A whole lot of love for my two favourite people! 💞</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL REVEAL -->
+      <section class="final-section">
+        <div class="final-stars">✦ ✧ ✦</div>
+        <p class="eyebrow">One last thing...</p>
+        <h2>Both of you are <em>my world.</em></h2>
+        <div class="personal-letter">
+          <p>I'll always remember the day both of you said, “I love you” and “I love you, Mr Cool.” 🥹❤️ The way you both sync with each other is honestly the cutest thing ever! Dono ka sync bohtt hi pyaara hai, and every little moment like that reminds me how lucky I am to have you both in my life.</p>
+          <p>You both are my bachchas, my sweetest little cuties, and two people who mean more to me than words can ever explain. The love, care, warmth and happiness you both bring into my life are truly priceless. Whether it's your little talks, your silly moments, your smiles, or the way you show love in your own special ways, every bit of it is precious to me.</p>
+          <p>I hope you both always keep smiling, keep caring for each other, keep being your adorable selves, and never forget how deeply loved you are. My Queen and my Princess, you both have a very special place in my heart — today, tomorrow and always.</p>
+          <p class="letter-ending">My best, cutest, sweetest loves… love you sooo muchhh! ❤️❤️</p>
+        </div>
+        <button class="gold-button big-button" id="loveButton">Tap for a shower of love 💖</button>
+        <p class="signature">With all my love, always. ♡</p>
+      </section>
+      <footer>MADE WITH LOVE · JUST FOR MY TWO FAVOURITE GIRLS</footer>
+    </section>
+  </main>
+
+  <!-- PHOTO LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Photo preview" hidden>
+    <button class="lightbox-close" id="closeLightbox" aria-label="Close photo">×</button>
+    <button class="lightbox-arrow" id="lightPrev" aria-label="Previous photo">‹</button>
+    <img id="lightboxImage" alt="Enlarged memory">
+    <button class="lightbox-arrow" id="lightNext" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
